@@ -8,8 +8,8 @@ app = Flask(__name__)
 app.secret_key = "cbt-secret-key"
 
 # NOTE: Change "yourusername" to your actual PythonAnywhere username below
-DB = "/home/phrankstarschoolsapp/phrankstarschools/backend/cbt.db"
-UPLOAD_FOLDER = "/home/phrakstarschoolsapp/phrankstarschools/backend/uploads"
+DB = "/home/phrankschoolsapp/phrankstarschoolsapp/backend/cbt.db"
+UPLOAD_FOLDER = "/home/phrakschoolsapp/phrankstarschoolsapp/backend/uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 app.config.update(
@@ -32,7 +32,7 @@ def get_db():
 # ---------------- INIT ----------------
 @app.route("/init/<secret>")
 def init(secret):
-    if secret != "PSCBTinit2025":
+    if secret != "403":
         return "Forbidden", 403
 
     db = get_db()
