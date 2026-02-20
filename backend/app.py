@@ -9,7 +9,7 @@ app.secret_key = "cbt-secret-key"
 
 # NOTE: Change "yourusername" to your actual PythonAnywhere username below
 DB = "/home/phrankschoolsapp/phrankstarschoolsapp/backend/cbt.db"
-UPLOAD_FOLDER = "/home/phrakschoolsapp/phrankstarschoolsapp/backend/uploads"
+UPLOAD_FOLDER = "/home/phrankschoolsapp/phrankstarschoolsapp/backend/uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 app.config.update(
