@@ -87,7 +87,7 @@ function App() {
         )}
 
         {!isTestPage && !isAdminPage && (
-          <div className="flex-1 min-h-0 flex items-center justify-center px-4">
+          <div className="flex-1 min-h-0 overflow-y-auto flex flex-col items-center justify-start sm:justify-center px-4 py-6">
             {renderPage()}
           </div>
         )}
