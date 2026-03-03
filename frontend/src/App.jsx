@@ -59,10 +59,11 @@ function App() {
   );
 
   return (
-    <div className="h-screen w-screen bg-[#0b2545] flex flex-col overflow-hidden" style={{ fontFamily: "'Outfit', sans-serif" }}>
+    <div className="min-h-screen w-screen bg-[#0b2545] flex flex-col" style={{ fontFamily: "'Outfit', sans-serif" }}>
       {isLoginPage && <ParticleBackground />}
 
-      <div className="relative z-10 flex flex-col h-full w-full">
+      <div className="relative z-10 flex flex-col min-h-screen w-full">
+
         {/* Nav */}
         <nav className="w-full px-3 sm:px-8 py-3 flex items-center gap-1 sm:gap-3 shrink-0">
           <span className="text-white font-bold text-sm sm:text-xl tracking-wide mr-auto truncate">Phrankstar School</span>
@@ -74,23 +75,27 @@ function App() {
           </div>
         </nav>
 
+        {/* Test page — fixed height, internal scroll */}
         {isTestPage && (
-          <div className="flex-1 min-h-0 px-3 sm:px-10 md:px-20 lg:px-48 xl:px-64 py-3 sm:py-5">
+          <div className="flex-1 flex flex-col h-[calc(100vh-52px)] px-3 sm:px-10 md:px-20 lg:px-48 xl:px-64 py-3 sm:py-5">
             {renderPage()}
           </div>
         )}
 
+        {/* Admin pages — full scroll */}
         {isAdminPage && (
-          <div className="flex-1 min-h-0 overflow-y-auto">
+          <div className="flex-1">
             {renderPage()}
           </div>
         )}
 
+        {/* Login pages — centered on desktop, scrollable on mobile */}
         {!isTestPage && !isAdminPage && (
-          <div className="flex-1 min-h-0 overflow-y-auto flex flex-col items-center justify-start sm:justify-center px-4 py-6">
+          <div className="flex-1 flex flex-col items-center justify-center px-4 py-8">
             {renderPage()}
           </div>
         )}
+
       </div>
     </div>
   );
