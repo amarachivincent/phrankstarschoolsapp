@@ -59,10 +59,10 @@ function App() {
   );
 
   return (
-    <div className="min-h-screen w-screen bg-[#0b2545] flex flex-col" style={{ fontFamily: "'Outfit', sans-serif" }}>
+    <div className="min-h-screen w-full bg-[#0b2545] flex flex-col" style={{ fontFamily: "'Outfit', sans-serif" }}>
       {isLoginPage && <ParticleBackground />}
 
-      <div className="relative z-10 flex flex-col min-h-screen w-full">
+      <div className="relative z-10 flex flex-col min-h-screen w-full overflow-x-hidden">
 
         {/* Nav */}
         <nav className="w-full px-3 sm:px-8 py-3 flex items-center gap-1 sm:gap-3 shrink-0">
