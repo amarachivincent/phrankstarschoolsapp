@@ -98,7 +98,7 @@ export default function StudentLogin({ setPage, setSelection, setStudentId }) {
     );
 
   return (
-    <div className="w-full max-w-sm px-4 py-6" style={{ fontFamily: "'Outfit', sans-serif" }}>
+    <div className="w-full max-w-sm px-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
       <h2 className="text-3xl font-bold text-center text-white mb-2 tracking-wide">CBT Login</h2>
       <p className="text-center text-white/50 text-sm mb-8 tracking-widest uppercase">Phrankstar School</p>
 
